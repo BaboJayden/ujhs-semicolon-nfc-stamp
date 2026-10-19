@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;800;900&display=swap");
+
+:root {
+  --black: #080808;
+  --green: #26f20d;
+  --green-soft: #d9ffd2;
+  --white: #ffffff;
+  --line: #161616;
+  --muted: #747474;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--black); }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--black);
+  background: linear-gradient(var(--black) 0 260px, var(--green-soft) 260px 100%);
+  font-family: "Noto Sans KR", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-shell {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: 34px 18px 46px;
+}
+
+.hero { color: var(--white); }
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--green);
+  font-size: clamp(15px, 4.2vw, 20px);
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+
+h1 {
+  margin: 0 0 28px;
+  font-size: clamp(35px, 10vw, 54px);
+  font-weight: 900;
+  letter-spacing: -.075em;
+  line-height: 1.05;
+}
+
+h1 em { color: var(--green); font-style: normal; }
+
+.stamp-board {
+  padding: 20px;
+  border: 2px solid var(--green);
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 8px 8px 0 rgba(7, 7, 7, .13);
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -.045em;
+}
+
+.primary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+
+.stamp-card {
+  min-width: 0;
+  text-align: center;
+  transition: transform .2s ease;
+}
+
+.stamp-card.just-completed { animation: stamp-pop .7s cubic-bezier(.2,.8,.2,1); }
+
+.stamp-visual {
+  position: relative;
+  display: grid;
+  width: min(100%, 190px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 3px solid var(--line);
+  border-radius: 50%;
+  background: var(--black);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, .12);
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.stamp-card.is-complete .stamp-visual {
+  border-color: var(--green);
+  box-shadow: 0 0 0 4px var(--green-soft), 0 5px 0 rgba(0, 0, 0, .12);
+}
+
+.locked-face,
+.revealed-face {
+  grid-area: 1 / 1;
+  display: grid;
+  place-items: center;
+}
+
+.locked-face {
+  color: var(--green);
+  font-size: clamp(54px, 17vw, 88px);
+  font-weight: 900;
+  line-height: 1;
+  transition: opacity .3s ease, transform .45s ease;
+}
+
+.revealed-face {
+  opacity: 0;
+  transform: scale(.84);
+  transition: opacity .35s ease, transform .55s cubic-bezier(.2,.9,.2,1.2);
+}
+
+.is-complete .locked-face { opacity: 0; transform: scale(1.25); }
+.is-complete .revealed-face { opacity: 1; transform: scale(1); }
+
+.art-symbol {
+  color: var(--white);
+  font-size: clamp(42px, 14vw, 76px);
+  font-weight: 900;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, .16);
+}
+
+.art-sign { background: linear-gradient(135deg, #19d8a5, #0b5f4c); }
+.art-light { background: radial-gradient(circle at 50% 40%, #fff9a7, #f053ff 38%, #352d99 75%); }
+.art-zombie { background: linear-gradient(145deg, #78972e, #1e3119 62%, #101010); }
+.art-flight { background: linear-gradient(155deg, #42c8ff, #2160d0 58%, #12234e); }
+.art-defense { background: linear-gradient(145deg, #ffab2f, #f14232 54%, #5b1721); }
+
+.stamp-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 3px;
+  min-height: 58px;
+  padding: 10px 4px 0;
+}
+
+.stamp-meta h3 {
+  width: 100%;
+  margin: 0;
+  font-size: clamp(13px, 3.4vw, 16px);
+  font-weight: 900;
+  letter-spacing: -.045em;
+  line-height: 1.25;
+}
+
+.status { flex: 0 0 auto; color: var(--muted); font-size: 10px; font-weight: 800; }
+.status { width: 100%; }
+.is-complete .status { color: #159b08; }
+
+.game-zone {
+  margin-top: 22px;
+  padding: 14px;
+  border: 1px solid #b9b9b9;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.game-progress {
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: var(--black);
+  background: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.game-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.game-card .stamp-visual { border-width: 2px; }
+.game-card .stamp-meta { display: block; min-height: 67px; padding: 9px 2px 0; }
+.game-card .status { display: block; margin-top: 4px; }
+
+.completion {
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 15px;
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  background: var(--black);
+  color: var(--white);
+  animation: completion-in .65s cubic-bezier(.2,.8,.2,1);
+}
+
+.completion:not([hidden]) { display: flex; }
+.completion-check { display: grid; flex: 0 0 38px; width: 38px; height: 38px; place-items: center; border-radius: 50%; color: var(--black); background: var(--green); font-size: 23px; font-weight: 900; }
+.completion p { margin: 0 0 2px; color: var(--green); font-size: 12px; font-weight: 900; }
+.completion strong { font-size: clamp(14px, 3.7vw, 17px); letter-spacing: -.04em; }
+
+.toast {
+  position: fixed;
+  z-index: 10;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(calc(100% - 36px), 440px);
+  margin: 0 auto;
+  padding: 13px 15px;
+  border: 2px solid var(--green);
+  border-radius: 8px;
+  color: var(--white);
+  background: var(--black);
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+  animation: toast-in .4s ease both;
+}
+
+.toast[hidden] { display: none; }
+.toast > span { color: var(--green); font-size: 25px; font-weight: 900; }
+.toast p { margin: 0; font-size: 13px; line-height: 1.35; }
+
+@keyframes stamp-pop { 0% { transform: scale(.92); } 45% { transform: scale(1.035); } 100% { transform: scale(1); } }
+@keyframes completion-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes toast-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 390px) {
+  .page-shell { padding-right: 13px; padding-left: 13px; }
+  .stamp-board { padding: 14px; }
+  .game-zone { padding: 10px; }
+  .game-grid { gap: 7px; }
+  .game-card .stamp-meta { padding: 7px 1px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+

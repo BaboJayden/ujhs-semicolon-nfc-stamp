@@ -136,7 +136,7 @@ h1 em { color: var(--green); font-style: normal; }
 .art-light { background: radial-gradient(circle at 50% 40%, #fff9a7, #f053ff 38%, #352d99 75%); }
 .art-zombie { background: linear-gradient(145deg, #78972e, #1e3119 62%, #101010); }
 .art-flight { background: linear-gradient(155deg, #42c8ff, #2160d0 58%, #12234e); }
-.art-defense { background: linear-gradient(145deg, #ffab2f, #f14232 54%, #5b1721); }
+.art-defense { background: var(--black); }
 
 .experience-image {
   width: 100%;

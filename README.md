@@ -6,11 +6,11 @@
 
 배포 주소 뒤에 다음 경로를 붙여 NFC 태그에 기록합니다.
 
-- 수화 인식 장갑: `?stamp=sign-k9Qm2`
-- 좀비 서바이벌: `?stamp=zombie-H7pL4`
-- 핸드트래킹 비행: `?stamp=flight-R5nX8`
-- 알고리즘 디펜스: `?stamp=defense-T3vK6`
-- 무드등: `?stamp=moodlight-M8cJ2`
+- 수화 인식 장갑: `?stamp=sgn`
+- 좀비 서바이벌: `?stamp=zom`
+- 핸드트래킹 비행: `?stamp=fly`
+- 알고리즘 디펜스: `?stamp=alg`
+- 무드등: `?stamp=led`
 
 ## 이미지 교체
 

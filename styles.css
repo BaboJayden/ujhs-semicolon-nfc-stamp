@@ -138,6 +138,13 @@ h1 em { color: var(--green); font-style: normal; }
 .art-flight { background: linear-gradient(155deg, #42c8ff, #2160d0 58%, #12234e); }
 .art-defense { background: linear-gradient(145deg, #ffab2f, #f14232 54%, #5b1721); }
 
+.experience-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .stamp-meta {
   display: flex;
   flex-direction: column;

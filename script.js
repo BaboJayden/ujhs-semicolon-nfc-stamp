@@ -1,11 +1,11 @@
 const STORAGE_KEY = "semicolon-stamps-v1";
 
 const stampCatalog = {
-  "sign-k9Qm2": { id: "sign", name: "수화 인식 장갑" },
-  "zombie-H7pL4": { id: "zombie", name: "좀비 서바이벌" },
-  "flight-R5nX8": { id: "flight", name: "핸드트래킹 비행" },
-  "defense-T3vK6": { id: "defense", name: "알고리즘 디펜스" },
-  "moodlight-M8cJ2": { id: "moodlight", name: "무드등" }
+  sgn: { id: "sign", name: "수화 인식 장갑" },
+  zom: { id: "zombie", name: "좀비 서바이벌" },
+  fly: { id: "flight", name: "핸드트래킹 비행" },
+  alg: { id: "defense", name: "알고리즘 디펜스" },
+  led: { id: "moodlight", name: "무드등" }
 };
 
 const gameIds = ["zombie", "flight", "defense"];

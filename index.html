@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080808" />
+    <meta name="description" content="운정고 세미콜론 부스 체험 도장판" />
+    <title>운정고 세미콜론 부스 체험 도장판</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">운정고 프로그래밍 동아리</p>
+        <h1>운정고 세미콜론<br /><em>부스 체험 도장판</em></h1>
+      </header>
+
+      <section class="stamp-board" aria-labelledby="required-title">
+        <div class="section-heading">
+          <h2 id="required-title">체험</h2>
+        </div>
+        <div class="primary-grid">
+          <article class="stamp-card" data-stamp="sign">
+            <div class="stamp-visual">
+              <div class="locked-face" aria-hidden="true">;</div>
+              <div class="revealed-face art-sign" aria-hidden="true">
+                <span class="art-symbol">☝</span>
+              </div>
+            </div>
+            <div class="stamp-meta">
+              <h3>수화 인식 장갑</h3>
+              <span class="status">미완료</span>
+            </div>
+          </article>
+
+          <article class="stamp-card" data-stamp="moodlight">
+            <div class="stamp-visual">
+              <div class="locked-face" aria-hidden="true">;</div>
+              <div class="revealed-face art-light" aria-hidden="true">
+                <span class="art-symbol">✦</span>
+              </div>
+            </div>
+            <div class="stamp-meta">
+              <h3>무드등</h3>
+              <span class="status">미완료</span>
+            </div>
+          </article>
+        </div>
+
+        <section class="game-zone" aria-labelledby="game-title">
+          <div class="section-heading game-heading">
+            <h2 id="game-title">미니게임</h2>
+            <span class="game-progress" aria-live="polite">0/2 완료</span>
+          </div>
+          <div class="game-grid">
+            <article class="stamp-card game-card" data-stamp="zombie">
+              <div class="stamp-visual">
+                <div class="locked-face" aria-hidden="true">;</div>
+                <div class="revealed-face art-zombie" aria-hidden="true">
+                  <span class="art-symbol">Z</span>
+                </div>
+              </div>
+              <div class="stamp-meta">
+                <h3>좀비<br />서바이벌</h3>
+                <span class="status">미완료</span>
+              </div>
+            </article>
+
+            <article class="stamp-card game-card" data-stamp="flight">
+              <div class="stamp-visual">
+                <div class="locked-face" aria-hidden="true">;</div>
+                <div class="revealed-face art-flight" aria-hidden="true">
+                  <span class="art-symbol">↗</span>
+                </div>
+              </div>
+              <div class="stamp-meta">
+                <h3>핸드트래킹<br />비행</h3>
+                <span class="status">미완료</span>
+              </div>
+            </article>
+
+            <article class="stamp-card game-card" data-stamp="defense">
+              <div class="stamp-visual">
+                <div class="locked-face" aria-hidden="true">;</div>
+                <div class="revealed-face art-defense" aria-hidden="true">
+                  <span class="art-symbol">A</span>
+                </div>
+              </div>
+              <div class="stamp-meta">
+                <h3>알고리즘<br />디펜스</h3>
+                <span class="status">미완료</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <aside class="completion" aria-live="polite" hidden>
+          <span class="completion-check" aria-hidden="true">✓</span>
+          <div>
+            <p>모든 체험 완료!</p>
+            <strong>IT 성향 테스트 후 배지를 받아가세요!</strong>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite" hidden>
+      <span>✓</span>
+      <p><strong class="toast-title"></strong><br />도장이 추가되었습니다.</p>
+    </div>
+  </body>
+</html>
+

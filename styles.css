@@ -41,6 +41,7 @@ body {
 
 h1 {
   margin: 0 0 28px;
+  text-align: center;
   font-size: clamp(35px, 10vw, 54px);
   font-weight: 900;
   letter-spacing: -.075em;

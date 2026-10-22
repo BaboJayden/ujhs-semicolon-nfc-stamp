@@ -5,7 +5,7 @@ const stampCatalog = {
   zom: { id: "zombie", name: "좀비 서바이벌" },
   fly: { id: "flight", name: "핸드트래킹 비행" },
   alg: { id: "defense", name: "알고리즘 디펜스" },
-  led: { id: "moodlight", name: "무드등" }
+  led: { id: "moodlight", name: "컬러 랩&컬러 메모리" }
 };
 
 const gameIds = ["zombie", "flight", "defense"];

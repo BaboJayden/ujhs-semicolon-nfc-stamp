@@ -49,10 +49,14 @@ function showToast(name) {
 
 const stamps = loadStamps();
 const params = new URLSearchParams(window.location.search);
-const scanned = stampCatalog[params.get("stamp")];
+const stampCode = params.get("stamp");
+const scanned = stampCatalog[stampCode];
 let newestId = null;
 
-if (scanned && !stamps.has(scanned.id)) {
+if (stampCode === "reset") {
+  localStorage.removeItem(STORAGE_KEY);
+  stamps.clear();
+} else if (scanned && !stamps.has(scanned.id)) {
   stamps.add(scanned.id);
   saveStamps(stamps);
   newestId = scanned.id;
